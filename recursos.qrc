@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Recursos/celsius.png</file>
+    </qresource>
+</RCC>
