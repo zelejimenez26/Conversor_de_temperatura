@@ -17,7 +17,14 @@ public:
 
 public slots:
     void cent2fahr(int i);
+    void cent2kel(int i);
+
     void fahr2cent(int i);
+    void fahr2kel(int i);
+
+    void kel2cent(int i);
+    void kel2fahr(int i);
+
 
 private:
     Ui::MainWindow *ui;

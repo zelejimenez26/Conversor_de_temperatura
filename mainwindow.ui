@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>616</width>
-    <height>425</height>
+    <width>783</width>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -74,6 +74,39 @@
       </layout>
      </widget>
     </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="title">
+       <string>Kelvin</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLCDNumber" name="outKel">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(170, 255, 127);
+background-color: rgb(255, 255, 127);</string>
+         </property>
+         <property name="value" stdset="0">
+          <double>273.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDial" name="inKel">
+         <property name="minimum">
+          <number>255</number>
+         </property>
+         <property name="maximum">
+          <number>372</number>
+         </property>
+         <property name="value">
+          <number>273</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -81,7 +114,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>616</width>
+     <width>783</width>
      <height>26</height>
     </rect>
    </property>
@@ -121,6 +154,22 @@
     <hint type="destinationlabel">
      <x>458</x>
      <y>141</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>inKel</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>outKel</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>647</x>
+     <y>341</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>647</x>
+     <y>154</y>
     </hint>
    </hints>
   </connection>
